@@ -31,10 +31,14 @@ async def scrape_data(playwright: Playwright, url: str):
         logger_all.info(f'No cookie consent prompt found or clickable')
 
     main_content = await page.content()
-    soup = BeautifulSoup(main_content, 'lxml')
-    with open('fotocasa.html', 'w', encoding='utf-8') as f:
-        f.write(str(soup))
-        # Closing the browser
+    data = {
+    "calories": [420, 380, 390],
+    "duration": [50, 40, 45]
+    }
+
+    #load data into a DataFrame object:
+    df = pd.DataFrame(data)
+    df.to_excel('data.xlsx', index=False)
     await browser.close()
 
 # Main function to run the scraper
