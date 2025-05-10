@@ -1,0 +1,8 @@
+asyncio
+undetected_playwright
+bs4
+tqdm
+pandas
+playwright
+lxml
+openpyxl
