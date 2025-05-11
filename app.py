@@ -52,3 +52,4 @@ if __name__ == "__main__":
     start = time.time()
     url: str = 'https://www.fotocasa.es/es/alquiler/viviendas/barcelona-provincia/baix-llobregat/l'  # "https://www.fotocasa.es/es/comprar/viviendas/barcelona-provincia/garraf/l"
     asyncio.run(main(url))
+    #
