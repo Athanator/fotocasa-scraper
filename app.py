@@ -13,7 +13,7 @@ from logger_creator import logger_all
 # Function to scrape data
 async def scrape_data(playwright: Playwright, url: str):
     args = ["--disable-blink-features=AutomationControlled"]
-    browser = await playwright.chromium.launch(headless=False, args=args)
+    browser = await playwright.chromium.launch(headless=True, args=args)
     page = await browser.new_page()
     logger_all.info(f'Loading Web page {url}...')
     await page.goto(url)
